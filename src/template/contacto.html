@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="/src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/static/css/styles.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/javascript.js"></script>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h3><i>La Librería</i></h3>
+        <nav class="navbar">
+            <div class="nav-item">
+                <a href="/./././index.html">Inicio</a>
+            </div>
+            <div class="nav-item">
+                <a href="./productos.html">Productos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./quienes_somos.html">Quiénes somos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./contacto.html">Contactanos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./index1.html">Consultas</a>
+            </div>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
+
+    </header>
+
+    <main class="padding">
+        <h2 class="secondary-title">Servicios Editoriales</h2>
+        <p class="presentation-text">Además de ser una librería, también somos una editorial apasionada 
+            por apoyar a escritores emergentes y establecidos. Ofrecemos servicios de edición, diseño y 
+            publicación, trabajando estrechamente con los autores para llevar sus visiones a la vida y 
+            compartir sus historias con el mundo.
+            <br>
+            Si sos escritor y queres mas informacion acerca de como publicarte con nosotros, completa 
+            el siguiente formulario y te contactamos
+        
+        </p>
+        <form action="mostrar_datos.html" name="formulario" method="get">
+            <!-- <form action="mostrar_datos.html" target="_blank"> -->
+
+            <label>Pronombre:</label>
+             <div class="radio-buttons">
+                <input type="radio" name="trato" id="el" value="el">
+                <label for="el">El</label>
+                <input type="radio" name="trato" id="ella" value="ella">
+                <label for="ella">Ella</label>
+                <input type="radio" name="trato" id="elle" value="elle">
+                <label for="elle">Elle</label>
+            </div>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre...">
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su e-mail...">
+
+            <label>Género literario preferido:</label>
+            <select name="genero">
+                <option value="0">Seleccione de la lista...</option>
+                <option value="1">Crimen y misterio</option>
+                <option value="2">Terror</option>
+                <option value="3">Ciencia ficción y fantasía</option>
+                <option value="4">Economía y finanzas</option>
+                <option value="5">Romance</option>
+                <option value="6">Religión y motivación personal</option>
+                <option value="7">Otro</option>
+            </select>
+
+            <label for="titulo">Título que desea publicar</label>
+            <input type="text" name="titulo" id="titulo" placeholder="Ingrese título del libro...">
+
+            <label for="imagen">Seleccione ilustracion representativa</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            <br>
+            <input type="submit" id="btn" name="btn" value="Enviar">
+
+        </form>
+    </main>
+    <footer class="footer"
+        >
+            <div class="section-footer"
+            >
+                <div>
+                    <a href="https://www.instagram.com/" 
+                    target="_blank" 
+                    class="a"
+                    title="Ir a la página de Instagram"
+                    >
+                        <img src="/src/img/instagram.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.facebook.com/" 
+                        target="_blank" 
+                        class="a"
+                        title="Ir a la página de Facebook"
+                    >
+                        <img src="/src/img/facebook.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </div>   
+
+
+                <div>
+                    <a href="https://www.youtube.com/" 
+                        target="_blank" 
+                        class="a"
+                        title="Ir a la página de YouTube"
+                    >
+                        <img src="/src/img/youtube.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </div>   
+
+                <div>
+                     <a href="https://www.twitter.com/" 
+                       target="_blank" 
+                       class="a"
+                       title="Ir a la página de Twitter"
+                    >
+                        <img src="/src/img/twitter-x.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </div>   
+            </div>
+
+            <div class="section-h5"
+                >
+                <h5 class="h5"
+                >
+                Derechos reservados @2024
+                </h5>
+            </div>
+        </footer>
+
+</body>
+
+</html>
