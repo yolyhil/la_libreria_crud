@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario recibido</title>
+    <link rel="shortcut icon" href="/src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/static/css/styles.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/javascript.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h3><i>La Librería</i></h3>
+        <nav class="navbar">
+            <div class="nav-item">
+                <a href="/./././index.html">Inicio</a>
+            </div>
+            <div class="nav-item">
+                <a href="./productos.html">Productos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./quienes_somos.html">Quiénes somos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./contacto.html    ">Contactanos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./index1.html">Consultas</a>
+            </div>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
+    </header>
+
+    <main class="padding">
+        <noscript>
+            <div>
+                <p>You need to turn on Javascript in your browser.</p>
+                <p>In Microsoft Internet Explorer 4 or greater:</p>
+                <ul>
+                    <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+                    <li>Click on the "Security" tab.</li>
+                    <li>Click on the "Custom Level" button. (In IE 4, select "Custom" and then click on "Settings...".)</li>
+                    <li>Under "Active scripting" make sure "Enable" is selected.</li>
+                </ul>
+                <p>In Netscape version 4 or greater:</p>
+                <ul>
+                    <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+                    <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+                    <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+                    <li>Click the <b>OK</b> button.</li>
+                </ul>
+            </div>
+        </noscript>
+
+    <p>Los datos enviados por el formulario son:</p>
+
+        <table class="centered-table">
+            <tr>
+                <th>Campo</th>
+                <th>Valor</th>
+            </tr>
+
+
+            <script>
+
+            /* el método por defecto es GET que envía el formulario en el link con todos los campos separados por & */
+                /*location.search trae la URL a partir del ? que está cuando pasan los datos del formulario */
+                var args = location.search.substr(1).split('&');  /* split: descompone la cadena de caracteres de la URL por el caracter & */
+
+                /*document.writeln(location.search.substring(0));  posición 0 trae el signo de pregunta de la URL*/
+                /*document.writeln(location.search.substring(1));  posición 1 trae todo lo que está después del ? de la URL, o sea los campos del formulario */
+
+                for (var i = 0; i < args.length; ++i) {
+                    var parts = args[i].split('=');  /* guardo en parts el nombre del campo y su valor */
+                    if (parts != null) {
+                        var field = parts[0];
+                        var value = parts[1];
+                        if (value == null) {
+                            value = "null"
+                        }
+                        else {
+                            value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+                        }
+
+                        /*en el writeln: voy armando la tabla modificando el doc para escribir etiquetas html y 
+                        los campos con su valor*/
+                        document.writeln('<tr><td align="right">' + field + '</td>');
+                        document.writeln('<td align="left">' + value + '</td></tr>');
+
+                    }
+                }
+            </script>
+
+           
+
+        </table>
+
+
+        
+        <br>
+        <a href="./contacto.html" id="btn"  style="text-decoration: none;">Volver</a>
+
+    </main>
+
+<footer class="footer"
+>
+    <div class="section-footer"
+    >
+        <div>
+            <a href="https://www.instagram.com/" 
+            target="_blank" 
+            class="a"
+            title="Ir a la página de Instagram"
+            >
+                <img src="/src/img/instagram.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>
+
+        <div>
+            <a href="https://www.facebook.com/" 
+                target="_blank" 
+                class="a"
+                title="Ir a la página de Facebook"
+            >
+                <img src="/src/img/facebook.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>   
+
+
+        <div>
+            <a href="https://www.youtube.com/" 
+                target="_blank" 
+                class="a"
+                title="Ir a la página de YouTube"
+            >
+                <img src="/src/img/youtube.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>   
+
+        <div>
+             <a href="https://www.twitter.com/" 
+               target="_blank" 
+               class="a"
+               title="Ir a la página de Twitter"
+            >
+                <img src="/src/img/twitter-x.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>   
+    </div>
+
+    <div class="section-h5"
+        >
+        <h5 class="h5"
+        >
+        Derechos reservados @2024
+        </h5>
+    </div>
+</footer>
+
+</html>
